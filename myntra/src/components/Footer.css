@@ -1,0 +1,139 @@
+
+#Fmain {
+    width: 100%;
+    height: 600px;
+    /* border: 1px solid rebeccapurple; */
+}
+#footer {
+    width: 100%;
+    height: 600px;
+    /* border: 2px solid red; */
+    background-color: rgb(235, 229, 229);
+}
+#footer >div:nth-child(1){
+    width: 100%;
+    height: 400px;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+.fooup >div:nth-child(1){
+    width: 20%;
+    height: 400px;
+    /* border: 1px solid gold; */
+}
+.fooup >div:nth-child(1) >h5 {
+    margin: 20px 0px 20px 0px;
+    font-size: 10px;
+}
+.fooup >div:nth-child(1) >p {
+    margin: 0px 0px 8px 0px;
+    font-size: 11px;
+    color: gray;
+}
+.fooup >div:nth-child(2){
+    width: 20%;
+    height: 400px;
+    /* border: 1px solid gold; */
+}
+.fooup >div:nth-child(2) >h5 {
+    margin: 20px 0px 20px 0px;
+    font-size: 10px;
+}
+.fooup >div:nth-child(2) >p {
+    margin: 0px 0px 8px 0px;
+    font-size: 11px;
+    color: gray;
+}
+.fooup >div:nth-child(3){
+    width: 20%;
+    height: 400px;
+    /* border: 1px solid gold; */
+}
+.fooup >div:nth-child(3) >h5 {
+    font-size: 10px;
+}
+.fooup >div:nth-child(3) >div:nth-child(2){
+    display: flex;
+}
+.fooup >div:nth-child(3) >div:nth-child(2) >img {
+    width: 40%;
+}
+.fooup >div:nth-child(3) >div:nth-child(2) >img:hover{
+    cursor: pointer;
+}
+.fooup >div:nth-child(3) >div:nth-child(4) >img{
+    width: 7%;
+}
+.fooup >div:nth-child(3) >div:nth-child(4) >img:hover{
+    cursor: pointer;
+}
+.fooup >div:nth-child(4){
+    width: 20%;
+    height: 400px;
+    /* border: 1px solid gold; */
+}
+.fooup >div:nth-child(4) >div:nth-child(1) {
+    display: flex;
+}
+.fooup >div:nth-child(4) >div:nth-child(1) >img {
+    width: 16%;
+    height: 40px;
+    margin: 20px 5px;
+}
+.fooup >div:nth-child(4) >div:nth-child(1) >div >h5 {
+    margin-bottom: 0px;
+    font-size: 11px;
+}
+.fooup >div:nth-child(4) >div:nth-child(1) >div >span {
+    font-size: 10px;
+    color: gray;
+}
+
+.fooup >div:nth-child(4) >div:nth-child(2) {
+    display: flex;
+}
+.fooup >div:nth-child(4) >div:nth-child(2) >img {
+    width: 12%;
+    height: 30px;
+    margin: 20px 10px;
+}
+.fooup >div:nth-child(4) >div:nth-child(2) >div >h5 {
+    margin-bottom: 0px;
+    font-size: 10px;
+}
+.fooup >div:nth-child(4) >div:nth-child(2) >div >span {
+    font-size: 11px;
+    color: gray;
+}
+#footer >div:nth-child(2){
+    width: 100%;
+    height: 200px;
+    /* border: 2px solid red; */
+}
+.foodo >div:nth-child(1){
+    width: 81%;
+    height: 150px;
+    /* border: 1px solid gold; */
+    margin: 0px 130px;
+}
+.foodo >div:nth-child(1) >h5 {
+    font-size: 10px;
+}
+.foodo >div:nth-child(1) >p {
+    font-size: 11px;
+    color: gray;
+}
+.foodo >div:nth-child(2){
+    width: 81%;
+    height: 50px;
+    /* border: 1px solid gold; */
+    margin: 0px 130px;
+    display: flex;
+    justify-content: space-between;
+}
+.foodo >div:nth-child(2) >div >h5{
+    margin: 0px;
+    color: gray;
+    font-size: 9px;
+}
