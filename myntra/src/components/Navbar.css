@@ -80,6 +80,7 @@
     margin: 8px 0px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .navright >div:nth-child(2) >div {
     width: 20%;

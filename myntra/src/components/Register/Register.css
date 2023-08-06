@@ -60,6 +60,16 @@
     margin: 20px 20px 0px 60px;
     font-size: 12px;
 }
+.in >form >label {
+    font-size: 12px;
+    margin-left: 150px;
+    /* border: 1px solid red; */
+}
+.in >form >select {
+    font-size: 12px;
+    margin-left: 165px;
+    /* border: 1px solid yellow; */
+}
 
 .text {
     display: flex;

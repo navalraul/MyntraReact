@@ -1,8 +1,46 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import './Register.css'
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+
+    const [userData, setUserData] = useState({ name: "", email: "", password: "", role: "Buyer" })
+    const router = useNavigate();
+
+    const handleChange = (event) => {
+        setUserData({ ...userData, [event.target.name]: event.target.value })
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (userData.name && userData.email && userData.password) {
+
+            const array = JSON.parse(localStorage.getItem("Myntra-Users")) || [];
+            const Ls = {
+                name: userData.name,
+                email: userData.email,
+                password: userData.password,
+                role: userData.role,
+                cart: []
+            };
+            array.push(Ls);
+
+            localStorage.setItem("Myntra-Users",JSON.stringify(array));
+            setUserData({ name: "", email: "", password: "", role:"Buyer" })
+            alert("Registration Successful..")
+            router('/login')
+        } else {
+            alert("Please fill all the details")
+        }
+    }
+
+    function selectRole(event) {
+        setUserData({...userData, ["role"]: event.target.value})
+    }
+
+
     return (
         <div id='Rmain'>
             <div id="body">
@@ -16,10 +54,15 @@ const Register = () => {
                         <p>to continue</p>
                     </div>
                     <div class="in">
-                        <form onsubmit="Register(event)">
-                            <input type="text" placeholder="Enter your Name" /><br />
-                            <input type="text" placeholder="Enter your Email" /><br />
-                            <input type="password" placeholder="Enter your Password" /><br />
+                        <form onSubmit={handleSubmit} >
+                            <input onChange={handleChange} name='name' type="text" placeholder="Enter your Name" /><br />
+                            <label>Select Role:</label><br />
+                            <select onChange={selectRole}>
+                                <option value="Buyer">Buyer</option>
+                                <option value="Seller">Seller</option>
+                            </select>
+                            <input onChange={handleChange} name='email' type="text" placeholder="Enter your Email" /><br />
+                            <input onChange={handleChange} name='password' type="password" placeholder="Enter your Password" /><br />
                             <input type="submit" value="Register" />
                         </form>
                     </div>
@@ -30,8 +73,8 @@ const Register = () => {
                         <p>Privacy Policy</p>
                     </div>
                     <div class="text2">
-                        <h5>Having trouble logging in?</h5>
-                        <p>Get Help</p>
+                        <h5>Already registered?</h5>
+                        <p onClick={ ()=> router('/login')}>Login</p>
                     </div>
                 </div>
             </div>
