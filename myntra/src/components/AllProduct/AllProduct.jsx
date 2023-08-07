@@ -26,6 +26,10 @@ const AllProduct = () => {
 
   return (
     <div id='Allmain'>
+      <div className='Head'>
+        <p>Home / Clothing / Men T-Shirts</p>
+        <h4>Men T-Shirts - 105754 items</h4>
+      </div>
       {!isProductsExist ? <div>No Products</div>
         :
         <div className='Allsub'>
@@ -33,7 +37,7 @@ const AllProduct = () => {
             <div onClick={ () => redirect(pro.id)} className='All' key={pro.name}>
               <img src={pro.image} />
               <h3>{pro.name}</h3>
-              <h4>{pro.category}</h4>
+              <p>{pro.category}</p>
               <h4>{pro.price}</h4>
             </div>
           ))}
